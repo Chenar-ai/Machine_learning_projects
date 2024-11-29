@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Melbourne Home Price Prediction</title>
+    
+    <link rel="Stylesheet" href="app.css">
+</head>
+<body>
+    <div class="img"></div>
+    <form class="form">
+        <h2>Number Of Rooms</h2>
+        <input class="rooms floatLabel" type="number" id="uirooms" name="numRooms" value="1"
+         min="1" max="40" placeholder="Enter number of rooms">
+
+        <h2>Number Of Bedrooms</h2>
+        <input class="bedrooms floatLabel" type="number" id="uibedrooms" name="numBedooms" value="1"
+        min="1" max="20" placeholder="Enter number of bedrooms">
+
+        <h2>Number Of Bathrooms</h2>
+        <input class="bathrooms floatLabel" type="number" id="uibathrooms" name="numBathooms" value="1"
+        min="1" max="15" placeholder="Enter number of bathrooms">
+
+        <h2>Number Of Carparks</h2>
+        <input class="carparks floatLabel" type="number" id="uicarparks" name="numCarparks" value="0"
+        min="0" max="10" placeholder="Enter number of carparks">
+
+        <h2>Land Area (Square Meter)</h2>
+        <input class="landarea floatLabel" type="number" id="uilandarea" name="landarea" value="100"
+        min="10" placeholder="Enter land area in square meter">
+
+        <h2>Building Area (Square Meter)</h2>
+        <input class="building area floatLabel" type="number" id="uibuildingarea" name="building area" value="50"
+        min="10" placeholder="Enter building area in square meter">
+
+        <h2>Select Suburb</h2>
+        <select id="uisuburb" name="suburb" class="dropdown">
+            <option value="" disabled selected>Choose a suburb</option>
+        </select>
+
+        <h2>Select a Property Type</h2>
+        <select id="uitype" name="type" class="dropdown">
+            <option value="" disabled selected>Choose a property Type</option>
+        </select>
+        <button type="submit" id="predict-btn" >Predict price</button>
+    </form>
+
+    <script src="app.js"></script>
+</body>
+</html>
