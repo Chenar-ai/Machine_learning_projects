@@ -1,4 +1,4 @@
-// Wait for the DOM to fully load
+
 document.addEventListener("DOMContentLoaded", function () {
     // DOM elements
     const suburbDropdown = document.getElementById("uisuburb");
@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const resultDiv = document.getElementById("predict-btn");
 
     // Backend API URL
-    const API_BASE_URL = "http://127.0.0.1:5000";
+    const API_BASE_URL = "/api";
 
     // Fetch and populate the suburbs dropdown
     async function loadSuburbs() {
@@ -28,6 +28,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     suburbDropdown.appendChild(option);
                 });
 
+                
+            // Adding "Other" suburb option manually to the dropdown list
             const otherOption = document.createElement("option");
             otherOption.value = "Other";
             otherOption.textContent = "Other";
@@ -61,7 +63,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     option.textContent = type;
                     typeDropdown.appendChild(option);
                 });
-
+                
+            // Adding "Unit" type option manually to the dropdown list
             const unitOption = document.createElement("option");
             unitOption.value = "Unit";
             unitOption.textContent = "Unit";
